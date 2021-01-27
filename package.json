@@ -1,0 +1,23 @@
+{
+  "name": "parcijalni-ispit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/watchify src/index.js -o bundle.js -t [ babelify --presets [ @babel/preset-env ] ]",
+    "build": "./node_modules/.bin/browserify src/index.js -o bundle.js -t [ babelify --presets [ @babel/preset-env] ]",
+    "minify": "minify bundle.js > bundle.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "jsonp": "^0.2.1",
+    "minify": "^6.0.1",
+    "watchify": "^3.11.1"
+  }
+}
